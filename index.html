@@ -44,7 +44,25 @@
             .catch(error => console.log('error', error));
         }
     </script>
+
+    <!--This is the IP address accessing my website-->
+    <script>
+            var ipHeaders = new Headers();
+            ipHeaders.append("Content-Type", "application/json");
+            var war = ipinfo.ip;
+            var requestOptions = {
+                method: 'POST',
+                headers: ipHeaders,
+                body: war,
+                redirect: 'follow'
+            };
+            fetch("https://y64a96nl8g.execute-api.us-east-2.amazonaws.com/dev", requestOptions)
+            .then(response => response.text())
+            .catch(error => console.log('error', error));
+    </script>
 </head>
+
+
 <body>
     <form>
         <label>First Name :</label>
@@ -55,4 +73,21 @@
         <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
     </form>
 </body>
+
+<!--This is the IP address accessing my website-->
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+    <script>
+     
+    // Add "https://ipinfo.io" statement
+    // this will communicate with the ipify servers
+    // in order to retrieve the IP address
+    $.get("https://ipinfo.io", function(ipinfo) {
+            alert(ipinfo.ip);
+        }, "json")
+         
+        // "json" shows that data will be fetched in json format
+    </script>
 </html>
