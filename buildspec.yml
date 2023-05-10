@@ -14,4 +14,4 @@ phases:
   post_build:
       commands:
       - echo "Updating files in the S3 bucket..."
-      - aws s3 sync * s3://ravens-resume-crc.com --delete
+      - aws s3 sync dist/webpage-frontend s3://ravens-resume-crc.com --delete
