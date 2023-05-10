@@ -11,8 +11,7 @@ phases:
   #   commands:
   #     - echo "Building Angular project..."
   #     - ng build --prod
-    post_build:
-        commands:
-        - echo "Updating files in the S3 bucket..."
-        - aws s3 sync index.html s3://ravens-resume-crc.com --delete
-        - aws s3 sync error.html s3://ravens-resume-crc.com --delete
+  post_build:
+      commands:
+      - echo "Updating files in the S3 bucket..."
+      - aws s3 sync webpage-frontend-crc/ s3://ravens-resume-crc.com --delete
