@@ -8,20 +8,47 @@
         body {
             background-color: #000000;
             }
-        label, button {
-            color: #ff2945;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            margin-left: 40px;
-            }
-        input {
+        h1 {
             color: #8b2b9e;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 50px;
             margin-left: 20px;
             }
         </style>
         <script>
+            fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/ ')
+            .then(res => res.json())
+            .then(res => {document.getElementById("counter").innerHTML = res.body.count})
+            .then(data => console.log(data));
+        </script>
+    </head>
+
+
+    <body>
+            <h1>Hello!!</h1>
+            If you press 'f12' on your keyboard (or 'fn' + 'f12' on mac) 
+            you can see the html that makes up the frontend of this site. 
+            There might be a secregt message hidden in there!
+    </body>
+
+    <!-- This is the IP address accessing my website
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        
+        <script>
+        
+        // Add "https://ipinfo.io" statement
+        // this will communicate with the ipify servers
+        // in order to retrieve the IP address
+        $.get("https://ipinfo.io", function(ipinfo) {
+                alert(ipinfo.ip);
+            }, "json")
+            
+            // "json" shows that data will be fetched in json format
+        </script> -->
+
+        <!-- <script>
             // define the callAPI function that takes a first name and last name as parameters
             var callAPI = (firstName,lastName)=>{
                 // instantiate a headers object
@@ -53,25 +80,9 @@
             <input type="text" id="fName">
             <label>Last Name :</label>
             <input type="text" id="lName">
-            <!-- set button onClick method to call function we defined passing input values as parameters -->
+             set button onClick method to call function we defined passing input values as parameters
             <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
         </form>
-    </body>
+    </body> -->
 
-    <!-- This is the IP address accessing my website
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-        </script>
-        
-        <script>
-        
-        // Add "https://ipinfo.io" statement
-        // this will communicate with the ipify servers
-        // in order to retrieve the IP address
-        $.get("https://ipinfo.io", function(ipinfo) {
-                alert(ipinfo.ip);
-            }, "json")
-            
-            // "json" shows that data will be fetched in json format
-        </script> -->
 </html>
