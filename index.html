@@ -18,6 +18,9 @@
             margin-left: 20px;
             }
         </style>
+    </head>
+
+    <body>
         <script>
             // instantiate a headers object
             var myHeaders = new Headers();
@@ -35,14 +38,11 @@
             // make API call with parameters and use promises to get response
             fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/ ', requestOptions)
             .then(res => res.json())
-            // .then(result => alert(JSON.parse(result).body))
             .then(res => {document.getElementById("counter").innerHTML = res.body.counter})
             .then(data => console.log(data));
         </script>
-    </head>
-
-    <body>
-            <h1>Hello!! No.<span id="counter"></span></h1>
+            <h1>Hello!! No.</h1>
+            <div id="counter"></div>
             If you press 'f12' on your keyboard (or 'fn' + 'f12' on mac) 
             you can see the html that makes up the frontend of this site. 
             There might be a secret message hidden in there!
