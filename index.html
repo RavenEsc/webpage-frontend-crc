@@ -69,8 +69,8 @@
                 //     body: raw,
                 //     redirect: 'follow'
                 // };
-            // make API call with parameters and use promises to get response
-            fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/', requestOptions)
+            // make API call with parameters and use promises to get response, requestOptions
+            fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/')
                 .then(res => {
                     if (!res.ok) {
                         throw new Error('Network response was not ok');
