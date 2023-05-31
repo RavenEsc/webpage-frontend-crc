@@ -1,137 +1,104 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>CRC Test: Hello World</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is my challenge.">
+        <link rel="shortcut icon" href="ringtones.ico" type="image/x-icon">
+        <title>Raven Spencer:Hoooray!!</title>
         <!-- Add some CSS to change client UI -->
         <style>
+            @keyframes gradient {
+          0% {background-position: 0%}
+          100% {background-position: 200%}
+        }
+
         body {
             background-color: #000000;
             color: white;
             font-size: 25px;
             margin-left: 30px;
             }
+
         h1 {
-            color: #8b2b9e;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 50px;
-            margin-left: 20px;
-            }
+            background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-clip: text;
+            animation: gradient 20s ease infinite;
+        }
+
+        n {
+            background: linear-gradient(to top right, goldenrod, rgb(170, 127, 18), white, rgb(170, 127, 18), goldenrod );
+          background-size: 200% auto;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradient 5s ease infinite;
+        }
+
         </style>
     </head>
 
     <body>
 
-        <p id="value-display"></p>
-        <n id="counter"></n>
+        <h1 style="font-size: 20px;" id="value-display"></h1>
+        
         <script>
           // Set the value to display
-          var value = "Hello, world!";
-      
+          var value = "Hello,";
           // Get the element to display the value
           var valueDisplay = document.getElementById("value-display");
-      
           // Set the innerHTML property to the value
           valueDisplay.innerHTML = value;
-        // instantiate a headers object
-        var myHeaders = new Headers();
-        // add content type header to object
-        myHeaders.append("Content-Type", "application/json");
-
-        function fetchData() {
-        // using built in JSON utility package turn object to string and store in a variable
-        var raw = JSON.stringify({ "counter": 1 });
-        // create a JSON object with parameters for API call and store in a variable
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-        // make API call with parameters and use promises to get response
-        fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/', requestOptions)
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return res.json();
-            })
-            .then(data => {
-                var counter = data.counter; // set the counter value from the response
-                var counterDisplay = document.getElementById("counter");
-                counterDisplay.innerHTML = counter;
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-        }
-
-        fetchData();
-        </script>
-            <h1>Hello!! No.</h1>
-            Yep, the number.
-            If you press 'f12' on your keyboard (or 'fn' + 'f12' on mac) 
-            you can see the html that makes up the frontend of this site. 
-            There might be a secret message hidden in there!
-    </body>
-</html>
 
 
-
-    <!-- Hi, this is Raven S. I bet you are wondering who I am right? Be on the lookout for a hidden link on the page, it might interest you! ~RS -->
-
-    
-    <!--This is the IP address accessing my website
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-        </script>
-        
-        <script>
-        
-        // Add "https://ipinfo.io" statement
-        // this will communicate with the ipify servers
-        // in order to retrieve the IP address
-        $.get("https://ipinfo.io", function(ipinfo) {
-                alert(ipinfo.ip);
-            }, "json")
-            
-            // "json" shows that data will be fetched in json format
-        </script>
-
-        <script>
-            // define the callAPI function that takes a first name and last name as parameters
-            var callAPI = (firstName,lastName)=>{
-                // instantiate a headers object
-                var myHeaders = new Headers();
-                // add content type header to object
-                myHeaders.append("Content-Type", "application/json");
-                // using built in JSON utility package turn object to string and store in a variable
-                var raw = JSON.stringify({"firstName":firstName,"lastName":lastName});
-                // create a JSON object with parameters for API call and store in a variable
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // The function that calls and fetches the url
+            function fetchData() {
+            // using built in JSON utility package turn object to string and store in a variable
+                var raw = JSON.stringify({ "counter": 1 });
+            // create a JSON object with parameters for API call and store in a variable
                 var requestOptions = {
                     method: 'POST',
                     headers: myHeaders,
                     body: raw,
                     redirect: 'follow'
                 };
-                // make API call with parameters and use promises to get response
-                fetch("https://y64a96nl8g.execute-api.us-east-2.amazonaws.com/dev", requestOptions)
-                .then(response => response.text())
-                .then(result => alert(JSON.parse(result).body))
-                .catch(error => console.log('error', error));
+            // make API call with parameters and use promises to get response
+            fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/', requestOptions)
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return res.json();
+                })
+                .then(data => {
+                    var counter = data.counter; // set the counter value from the response
+                    var counterDisplay = document.getElementById("counter");
+                    counterDisplay.innerHTML = counter;
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
             }
+
+            fetchData();
         </script>
-    </head>
 
+        <h1>No.<n id="counter"></n></h1>
+        <n style="font-size: 200px;">Happy Birthday G!</n>
 
-    <body>
-        <form>
-            <label>First Name :</label>
-            <input type="text" id="fName">
-            <label>Last Name :</label>
-            <input type="text" id="lName">
-             set button onClick method to call function we defined passing input values as parameters
-            <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
-        </form>
-    </body> -->
+        <!--Yep, the number.
+        If you pressed 'f12' on your keyboard (or 'fn' + 'f12' on mac) 
+        you can see the html that makes up the frontend of this site. 
+        There might be a secret message hidden in here too!-->
+        
+    </body>
+
+</html>
