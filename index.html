@@ -60,7 +60,7 @@
                 var counter = data.counter; // set the counter value from the response
                 var counterDisplay = document.getElementById("counter");
                 counterDisplay.innerhtml = counter;
-                console.log(data.value);
+                console.log(data);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
