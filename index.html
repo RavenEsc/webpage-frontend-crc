@@ -27,6 +27,8 @@ var myHeaders = new Headers();
 // add content type header to object
 myHeaders.append("Content-Type", "application/json");
 
+var counter = 1
+
 function fetchData() {
   // using built in JSON utility package turn object to string and store in a variable
   var raw = JSON.stringify({ "counter": 1 });
