@@ -57,7 +57,8 @@
             })
             .then(data => {
                 var counter = data.counter; // set the counter value from the response
-                document.getElementById("counter").innerHTML = counter; // update the HTML element with the ID "counter"
+                var counterDisplay = document.getElementById("counter");
+                counterDisplay.innerhtml = counter;
                 console.log(data);
             })
             .catch(error => {
