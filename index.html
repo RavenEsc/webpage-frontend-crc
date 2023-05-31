@@ -44,7 +44,7 @@
     <body>
 
         <h1 style="font-size: 20px;" id="value-display"></h1>
-        
+
         <script>
           // Set the value to display
           var value = "Hello,";
@@ -55,20 +55,20 @@
 
 
             // instantiate a headers object
-            var myHeaders = new Headers();
+            // var myHeaders = new Headers();
             // add content type header to object
-            myHeaders.append("Content-Type", "application/json");
+            // myHeaders.append("Content-Type", "application/json");
             // The function that calls and fetches the url
-            function fetchData() {
+            // function fetchData() {
             // using built in JSON utility package turn object to string and store in a variable
-                var raw = JSON.stringify({ "counter": 1 });
+                // var raw = JSON.stringify({ "counter": 1 });
             // create a JSON object with parameters for API call and store in a variable
-                var requestOptions = {
-                    method: 'POST',
-                    headers: myHeaders,
-                    body: raw,
-                    redirect: 'follow'
-                };
+                // var requestOptions = {
+                //     method: 'POST',
+                //     headers: myHeaders,
+                //     body: raw,
+                //     redirect: 'follow'
+                // };
             // make API call with parameters and use promises to get response
             fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/', requestOptions)
                 .then(res => {
@@ -86,19 +86,19 @@
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
                 });
-            }
+            // }
 
-            fetchData();
+            // fetchData();
         </script>
 
         <h1>No.<span id="counter"></span></h1>
         <n style="font-size: 200px;">Happy Birthday G!</n>
 
         <!--Yep, the number.
-        If you pressed 'f12' on your keyboard (or 'fn' + 'f12' on mac) 
-        you can see the html that makes up the frontend of this site. 
+        If you pressed 'f12' on your keyboard (or 'fn' + 'f12' on mac)
+        you can see the html that makes up the frontend of this site.
         There might be a secret message hidden in here too!-->
-        
+
     </body>
 
 </html>
