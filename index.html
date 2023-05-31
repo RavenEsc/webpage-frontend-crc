@@ -57,9 +57,10 @@
                 return res.json();
             })
             .then(data => {
-                var counterDisplay = document.getElementById("counter").value;
-                counterDisplay.innerhtml = data.counter;
-                console.log(data.counter);
+                var counter = data.counter; // set the counter value from the response
+                var counterDisplay = document.getElementById("counter");
+                counterDisplay.innerhtml = counter;
+                console.log(data.value);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
