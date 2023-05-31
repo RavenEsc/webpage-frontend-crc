@@ -1,0 +1,37 @@
+A fetch function that does multiple calls:
+
+            // instantiate a headers object
+            // var myHeaders = new Headers();
+            // add content type header to object
+            // myHeaders.append("Content-Type", "application/json");
+            // The function that calls and fetches the url
+            // function fetchData() {
+            // using built in JSON utility package turn object to string and store in a variable
+                // var raw = JSON.stringify({ "counter": 1 });
+            // create a JSON object with parameters for API call and store in a variable
+                // var requestOptions = {
+                //     method: 'POST',
+                //     headers: myHeaders,
+                //     body: raw,
+                //     redirect: 'follow'
+                // };
+            // make API call with parameters and use promises to get response
+            fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/')
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return res.json();
+                })
+                .then(data => {
+                    var counter = data.counter; // set the counter value from the response
+                    var counterDisplay = document.getElementById("counter");
+                    counterDisplay.innerHTML = counter;
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+            // }
+
+            // fetchData();

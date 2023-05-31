@@ -53,23 +53,6 @@
           // Set the innerHTML property to the value
           valueDisplay.innerHTML = value;
 
-
-            // instantiate a headers object
-            // var myHeaders = new Headers();
-            // add content type header to object
-            // myHeaders.append("Content-Type", "application/json");
-            // The function that calls and fetches the url
-            // function fetchData() {
-            // using built in JSON utility package turn object to string and store in a variable
-                // var raw = JSON.stringify({ "counter": 1 });
-            // create a JSON object with parameters for API call and store in a variable
-                // var requestOptions = {
-                //     method: 'POST',
-                //     headers: myHeaders,
-                //     body: raw,
-                //     redirect: 'follow'
-                // };
-            // make API call with parameters and use promises to get response, requestOptions
             fetch('https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/')
                 .then(res => {
                     if (!res.ok) {
@@ -86,9 +69,6 @@
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
                 });
-            // }
-
-            // fetchData();
         </script>
 
         <h1>No.<span id="counter"></span></h1>
