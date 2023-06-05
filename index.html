@@ -61,7 +61,7 @@
                     return res.json();
                 })
                 .then(data => {
-                    var counter = data.data.counter; // set the counter value from the response
+                    var counter = data.body.counter; // set the counter value from the response
                     var counterDisplay = document.getElementById("counter");
                     counterDisplay.innerHTML = counter;
                     console.log(data);
