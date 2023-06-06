@@ -1,84 +1,253 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This is my challenge.">
-        <link rel="shortcut icon" href="ringtones.ico" type="image/x-icon">
-        <title>Raven Spencer:Hoooray!!</title>
-        <!-- Add some CSS to change client UI -->
-        <style>
-            @keyframes gradient {
-          0% {background-position: 0%}
-          100% {background-position: 200%}
-        }
+<html lang="en">
 
-        body {
-            background-color: #000000;
-            color: white;
-            font-size: 25px;
-            margin-left: 30px;
-            }
+  <head>
 
-        h1 {
-            background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            background-clip: text;
-            animation: gradient 20s ease infinite;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/ringtones.ico" type="image/x-icon">
 
-        n {
-            background: linear-gradient(to top right, goldenrod, rgb(170, 127, 18), white, rgb(170, 127, 18), goldenrod );
-          background-size: 200% auto;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: gradient 5s ease infinite;
-        }
+    <title>Raven Spencer - Cloud Security</title>
 
-        </style>
-    </head>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <body>
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-        <h1 style="font-size: 20px;" id="value-display"></h1>
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
 
-        <script>
-          // Set the value to display
-          var value = "Hello,";
-          // Get the element to display the value
-          var valueDisplay = document.getElementById("value-display");
-          // Set the innerHTML property to the value
-          valueDisplay.innerHTML = value;
+  </head>
 
-            fetch('https://4gcjjj7sp4.execute-api.us-east-2.amazonaws.com/dev')
-                .then(res => {
-                    if (!res.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return res.json();
-                })
-                .then(data => {
-                    var counter = data.body.counter; // set the counter value from the response
-                    var counterDisplay = document.getElementById("counter");
-                    counterDisplay.innerHTML = counter;
-                    console.log(data);
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                });
-        </script>
+  <body id="page-top">
 
-        <h1>No.<span id="counter"></span></h1>
-        <n style="font-size: 200px;"></n>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" width="40" alt=""> Home
+        </span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-        <!--Yep, the number.
-        If you pressed 'f12' on your keyboard (or 'fn' + 'f12' on mac)
-        you can see the html that makes up the frontend of this site.
-        There might be a secret message hidden in here too!-->
+    <div class="container-fluid p-0">
 
-    </body>
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Raven
+            <span class="text-primary">Spencer</span>
+          </h1>
+          <div class="subheading mb-5">***** ***** ** · Princeton, MN 55371 · (763) 328-7223 ·
+            <a href="mailto:name@email.com">RAVEELEVEN8@GMAIL.COM</a>
+          </div>
+          <!-- <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p> -->
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/raven-spencer-a0a558241/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/RavenEsc">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <script>
+              fetch('https://4gcjjj7sp4.execute-api.us-east-2.amazonaws.com/dev')
+                  .then(res => {
+                      if (!res.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return res.json();
+                  })
+                  .then(data => {
+                      var counter = data.body.counter; // set the counter value from the response
+                      var counterDisplay = document.getElementById("counter");
+                      counterDisplay.innerHTML = counter;
+                      console.log(data);
+                  })
+                  .catch(error => {
+                      console.error('There was a problem with the fetch operation:', error);
+                  });
+          </script>
+          <n><span id="counter"></span></n>
+         people have visited this site.
+        </div>
+        
+        
+        
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <!-- <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Boat Builder (Trim Dept.)</h3>
+              <div class="subheading mb-3">Northstar Canoes</div>
+              <p>#####</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">July 2022 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Grocery Stock Clerk/ Scanning Assistant</h3>
+              <div class="subheading mb-3">Coborns</div>
+              <p>#######</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2019 - May 2022</span>
+            </div>
+          </div> -->
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of Minnesota</h3>
+              <div class="subheading mb-3">Cybersecurity Bootcamp</div>
+              <div>IT Technology - Cybersecurity</div>
+              <p href=" ">6 months+</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2022 - December 2022</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-windows"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-python"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-aws"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-chrome"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-linux"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-docker"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-visualstudio"></i>
+            </li>
+          </ul>
+
+          <!-- <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              #</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              #</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              #</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              #</li>
+          </ul>
+        </div> -->
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p></p>
+          <p class="mb-0"></p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="certifications">
+        <div class="my-auto">
+          <h2 class="mb-5">Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <img src="img/SecurityPlusLogo.png" width="200" alt=""></img>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
 
 </html>
