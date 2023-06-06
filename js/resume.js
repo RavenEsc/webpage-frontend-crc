@@ -1,3 +1,22 @@
+(function() {
+  fetch('https://4gcjjj7sp4.execute-api.us-east-2.amazonaws.com/dev')
+  .then(res => {
+      if (!res.ok) {
+          throw new Error('Network response was not ok');
+      }
+      return res.json();
+  })
+  .then(data => {
+      var counter = data.body.counter; // set the counter value from the response
+      var counterDisplay = document.getElementById("counter");
+      counterDisplay.innerHTML = counter;
+      console.log(data);
+  })
+  .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+  });
+})();
+
 (function($) {
   "use strict"; // Start of use strict
 
