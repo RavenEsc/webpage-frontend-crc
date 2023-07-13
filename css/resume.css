@@ -119,6 +119,16 @@ a {
   100% {background-position: 200%}
 }
 
+nat {
+  background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s linear infinite;
+  overflow-wrap: break-word;
+}
+
 n {
   background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
   background-size: 200% auto;
