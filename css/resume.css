@@ -6,7 +6,11 @@
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96; }
+  color: #d8d8d8;
+  background: url('../img/background.png'), #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 @media (min-width: 992px) {
   body {
@@ -22,7 +26,7 @@ h6 {
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40; }
+  color: #916b65; }
 
 h1 {
   font-size: 6rem;
@@ -38,7 +42,7 @@ h2 {
   font-size: 1.35rem; }
 
 .list-social-icons a {
-  color: #495057; }
+  color: #0b0b0b; }
   .list-social-icons a:hover {
     color: #661321; }
   .list-social-icons a .fa-lg {
@@ -66,11 +70,12 @@ h2 {
     #sideNav .navbar-brand {
       display: flex;
       margin: auto auto 0;
-      padding: 0.5rem; }
+      padding: 0.5rem;}
       #sideNav .navbar-brand .img-profile {
         max-width: 10rem;
         max-height: 10rem;
-        border: 0.5rem solid rgba(255, 255, 255, 0.2); }
+        border: 0.2rem solid;
+        animation: profileAnimationBorder 1s ease infinite;}
     #sideNav .navbar-collapse {
       display: flex;
       align-items: flex-start;
@@ -86,7 +91,7 @@ h2 {
             display: block; } }
 
 section.resume-section {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 0px;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important; }
   section.resume-section .resume-item .resume-date {
@@ -104,15 +109,17 @@ section.resume-section {
     padding-bottom: 3rem !important; } }
 
 .bg-primary {
-  background-color: rgb(19, 0, 0) !important; }
+  background-color: rgb(0, 0, 0) !important;
+}
 
 .text-primary {
-  color: rgb(105, 3, 3) !important; }
+  color: rgb(188, 20, 15) !important; }
 
 a {
-  color: rgb(160, 16, 16); }
+  color: rgb(123, 11, 11); }
   a:hover, a:focus, a:active {
-    color: rgb(66, 13, 13); }
+    color: rgb(196, 9, 9);
+    text-decoration: none; }
 
 @keyframes gradient {
   0% {background-position: 0%}
@@ -120,7 +127,7 @@ a {
 }
 
 nat {
-  background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
+  background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgb(255, 255, 255), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -130,7 +137,7 @@ nat {
 }
 
 n {
-  background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgba(255, 255, 255, 0), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
+  background: linear-gradient(to right top, goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgb(255, 255, 255), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod, rgb(170, 127, 18), rgb(170, 127, 18), rgb(255, 255, 255), rgb(170, 127, 18), rgb(170, 127, 18), goldenrod );
   background-size: 200% auto;
   background-clip: text;
   font-weight: bold;
@@ -145,4 +152,201 @@ n {
 .visitor-counter {
   font-size: 3rem;
   padding-right: 1rem;
+}
+
+rgb {
+  background-size: 200% auto;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rgbAnimation 5s linear infinite;
+  overflow-wrap: break-word;
+}
+
+@keyframes rgbAnimation {
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+  25% {
+    background-color: rgb(0, 255, 0);
+  }
+  50% {
+    background-color: rgb(0, 0, 255);
+  }
+  75% {
+    background-color: rgb(255, 255, 0);
+  }
+  100% {
+    background-color: rgb(255, 0, 0);
+  }
+}
+
+@keyframes rgbAnimationBorder {
+  0% {
+    border-color: rgb(255, 0, 0);
+  }
+  25% {
+    border-color: rgb(0, 255, 0);
+  }
+  50% {
+    border-color: rgb(0, 0, 255);
+  }
+  75% {
+    border-color: rgb(255, 255, 0);
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
+}
+
+@keyframes profileAnimationBorder {
+  0% {
+    border-color: rgb(255, 0, 0);
+  }
+  25% {
+    border-color: rgba(255, 0, 0, 0.592);
+  }
+  50% {
+    border-color: rgba(255, 0, 0, 0.143);
+  }
+  75% {
+    border-color: rgba(255, 0, 0, 0.698);
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: calc(96%);
+  margin: 0;
+}
+
+.wrapper > a {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-size: cover;
+  padding: 1em;
+  font-weight: bolder;
+  font-size: larger;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wrapper > a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.40);
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper > a:hover {
+  transform: perspective(2000px) rotateY(17deg);
+}
+
+.wrapper > a:hover:before {
+  opacity: 0;
+}
+
+.wrapper {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(120px, auto);
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  background: url('../img/project1.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 7s infinite;
+}
+
+.two {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  background: url('../img/project2.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 8s infinite;
+}
+
+.three {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  background: url('../img/project3.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 9s infinite;
+}
+
+.four {
+  grid-column: 3;
+  grid-row: 3;
+  background: url('../img/project4.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 10s infinite;
+}
+
+.five {
+  grid-column: 3;
+  grid-row: 4;
+  background: url('../img/project5.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 11s infinite;
+}
+
+.six {
+  grid-column: 2;
+  grid-row: 4;
+  background: url('../img/project6.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 12s infinite;
+}
+
+.seven {
+  grid-column: 2;
+  grid-row: 3;
+  background: url('../img/project7.jpg') center/contain no-repeat, url('../img/project.jpg');
+  animation: rgbAnimationBorder 13s infinite;
+}
+
+.badge1 {
+  background: linear-gradient(to right top,silver, rgb(255, 213, 0), rgb(135, 0, 0), black );
+  content: url('../img/cybersecurity-boot-camp.png');
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.badge2 {
+  background: linear-gradient(to right top, rgb(255, 0, 0), silver, rgb(208, 0, 0), black );
+  content: url('../img/comptia-security-ce-certification.png');
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.badge3 {
+  background: linear-gradient(to right top, silver, rgb(2, 128, 207), rgb(1, 61, 228), black );
+  content: url('../img/aws-certified-solutions-architect-associate.png');
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.badgeteaser {
+  background: linear-gradient(to right top, silver, rgb(2, 128, 207), rgb(1, 61, 228), black );
+  content: url('../img/teasercert.jpg');
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.counterbadge {
+  background: linear-gradient(to right top, rgba(192, 192, 192, 0.51), rgb(0, 0, 0), rgba(49, 49, 49, 0.504), black );
+  text-align: left;
+  grid-column: 3;
+  grid-row: 1;
 }
