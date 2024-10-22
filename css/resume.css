@@ -238,11 +238,6 @@ rgb {
   box-sizing: border-box;
 }
 
-.wrapper {
-  max-width: calc(96%);
-  margin: 0;
-}
-
 .wrapper > a {
   position: relative;
   border: 2px solid transparent;
@@ -275,11 +270,9 @@ rgb {
 }
 
 .wrapper {
+  margin: 0;
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(120px, auto);
 }
 
 .one {
@@ -358,7 +351,6 @@ rgb {
 .badge4 {
   background: linear-gradient(to right top, rgb(255, 255, 255), rgb(84, 189, 255), rgb(39, 241, 255), rgb(251, 254, 255) );
   content: url('../img/ckalogocert.png');
-  width: 45.2%; /*don't leave this there!!*/
   grid-column: 4;
   grid-row: 1;
 }
